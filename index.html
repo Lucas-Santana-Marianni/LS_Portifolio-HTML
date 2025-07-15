@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio - Lucas S.M</title>
+  <link rel="stylesheet" href="styledes.css">
+</head>
+<body>
+  <style>
+    :root {
+ --cor-primaria: #9c9c9bda;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-primaria);
+  color: #000000;
+}
+
+header, section, footer {
+  padding: 2%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  border-radius: 0.6em;
+  border-style: outset;
+  border-width: 0.2em;
+  display: inline-block;
+  padding: 0.5em;
+  border-color:#d4d4d4;
+}
+
+#sobre h2 {
+  font-size: 2rem;
+  border-radius: 0.6em;
+  border-color:#000000;
+  border-style: outset;
+  display: inline-block;
+  padding: 0.3em;
+  border-width: 0.2em;
+}
+
+#sobre pre {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#projetos h2,
+#contato h2 {
+  border-color:#000000;
+  border-style: outset;
+  border-width: 0.2em;
+  display: inline-block;
+  border-radius: 0.6em;
+  padding: 0.4em;
+  font-size: 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 0.1em solid #ddd;
+  border-radius: 0.6em;
+  margin: 2%;
+  padding: 2%;
+  width: 95%;
+  max-width: 300px;
+  height: auto;
+  transition: 0.5s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-word;
+}
+
+.card:hover,
+.img:hover {
+  transform: scale(1.05);
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  background: white;
+  border: 0.1em solid #000000;
+  border-radius: 1em;
+  padding: 1em;
+  width: 80%;
+  max-width: 250px;
+}
+
+#chatbox {
+  height: 150px;
+  max-height: 30vh;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  border: 0.1em solid #000000;
+  border-radius: 1em;
+}
+
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+  
+  input, textarea {
+    width: 30%;
+    margin: 0.5em auto;
+    display: block;
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: 2px solid #818181;
+  }
+
+  button {
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    background-color: #5f5f5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  footer img {
+    width: 12%;
+    max-width: 50px;
+    height: auto;
+    margin: 0.5em;
+    transition: 0.5s;
+  }
+
+  </style>
+   
+  <header style="background-color: #ffffff;">
+    <h1 style="font-size: 4rem; color:#000000">Lucas Santana Marianni</h1>
+    <p style="color: #000000; font-size: 1.3rem">Se você está procurando sobre um pouco de como é ser programador, está no lugar certo!</p>
+  </header>
+
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <pre style="font-size: 1.3rem; color: #ffffff;"><mark style="background-color: #f3f3f3;">
+Meu nome é Lucas Santana Marianni, e eu sou um desenvolvedor de sistemas Jr. buscando aprender cada vez mais e mostrar as minhas evoluções! 
+Abaixo você encontrará alguns projetos meus, para ver um pouco sobre como é o trabalho de um desenvolvedor. Inclusive, esse site é um dos meus projetos!</mark></pre>
+  </section>
+  <hr>
+
+  <section id="projetos">
+    <h2><u>Projetos</u></h2>
+    <div class="card-container">
+
+      <div class="card">
+        <a href="https://world-jerseys.glitch.me"
+        target="_blank"
+        style="color: #000;">
+        World-Jerseys</a>
+        <p>Um site de camisetas de Futebol do mundo todo.</p>
+      </div>
+
+      <div class="card">
+      <a href="https://chestnut-jeweled-clerk.glitch.me"
+      target="_blank"
+      style="color: #000;">
+        Lucas's Pizzaria</a>
+        <p>Um site de pizzaria.</p>
+      </div>
+
+      <div class="card">
+        <a href="https://curved-delicate-string.glitch.me"
+        target="_blank"
+        style="color: #000;">
+        Lista de Compras</a>
+        <p>Um site de lista de compras.</p>
+
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <section id="contato">
+    <h2><u>Contato</u></h2>
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Nome" required />
+      <input type="email" placeholder="E-mail" required />
+      <textarea placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer style="background-color: #ffffff;">
+    <p>Siga-me:</p>
+    <a href="https://facebook.com" title="Facebook" target="_blank">
+      <img src="https://cdn.glitch.global/2a855369-2424-46be-aa70-8cbac142956e/facebook-13.png?v=1746387904482" class="img">
+    </a>
+    
+    <a href="https://github.com" title="GitHub" target="_blank">
+      <img src="https://cdn.glitch.global/2a855369-2424-46be-aa70-8cbac142956e/toppng.com-github-wordmark-with-octocat-badge-1280x1156.png?v=1746387897325" class="img">
+    </a>
+  </footer>
+
+  <!-- Assistente Virtual -->
+  <div id="chatbot" style="
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 1em;
+    padding: 1em;
+    width: 80%;
+    max-width: 250px;
+  ">  
+    <div id="chatbox" style="
+      height: 15vh;
+      overflow-y: auto;
+      margin-bottom: 1em;
+      border: 1px solid #000;
+      border-radius: 1em;
+      padding: 0.5em;
+    ">
+      <p><strong>Mimi:</strong> Olá, eu sou a Mimi, assistente virtual do Lucas! Em que posso ajudar?</p>
+      <pre>- Sobre 
+- Projetos
+- Contato
+       
+      </pre>
+    </div>
+    <input 
+      type="text" 
+      id="userInput" 
+      placeholder="Digite aqui..." 
+      style="width: 90%; padding: 0.5em; border-radius: 0.5em;"
+      onkeypress="if(event.key === 'Enter') enviarParaBot()" 
+    />
+  </div>
+
+  <script>
+    function enviarParaBot() {
+      const input = document.getElementById("userInput");
+      const chatbox = document.getElementById("chatbox");
+      const texto = input.value.toLowerCase();
+    
+      chatbox.innerHTML += `<p><strong>Você:</strong> ${input.value}</p>`;
+    
+      let resposta = "Desculpe, não entendi. Pode tentar de outro jeito?";
+      if (texto.includes("projetos")) {
+        resposta = "Você pode ver alguns projetos na seção 'Projetos' acima!";
+      } else if (texto.includes("contato")) {
+        resposta = "Você pode mandar uma mensagem para o Lucas na seção 'Contato'.";
+      } else if (texto.includes("sobre")) {
+        resposta = "Você pode saber mais sobre o Lucas na seção 'Sobre mim'.";
+      }
+    
+      chatbox.innerHTML += `<p><strong>Bot:</strong> ${resposta}</p>`;
+      input.value = "";
+    
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      alert("Mensagem enviada (simulação)!");
+    }
+  </script>
+</body>
+</html>
